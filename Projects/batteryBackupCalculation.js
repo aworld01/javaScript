@@ -5,27 +5,28 @@ w = Watts
 pf = Power Fector
 
 Require:-
-    AH, v, Load
+    AH, v, load
 
 
-load = 300w;
-pf = .8;
-w = (load / pf);
-v = 12;
+let load = 300;
+let pf = .8;
+let v = 12;
+let batteryAH = 150;
 
-useableBattery = .7 or 70% //for leadAcid
-
-dischargingCurrent = (w / v);
-
-batteryBackup = (batteryAH / dischargingCurrent);
-
+let w = (load / pf);
+let dischargingCurrent = (w / v);
+let batteryBackup = (batteryAH / dischargingCurrent);
 //Note: We can use only 70% of Lead Acid Battery
-useable = (batteryBackup * 70) / 100;
-or
-useable = (batteryBackup * .7);
+letuseable = (batteryBackup * 70) / 100;
+//or
+let useable = (batteryBackup * .7);
+console.log(useable);
 
 minutes = (60 * .2);
 */
+
+
+
 
 let batteryAH = 150;
 let pf = .8;
